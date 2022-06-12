@@ -6,6 +6,7 @@ const elSignupUsername = document.querySelector(".signup__username");
 const elSignuppassword = document.querySelector(".signup__password");
 const elSignupPhone = document.querySelector(".signup__phone");
 const elSignupForm = document.querySelector(".signup__form");
+let password = 10062001
 
 elSignupForm.addEventListener("submit", (evt) => {
   
@@ -15,7 +16,7 @@ elSignupForm.addEventListener("submit", (evt) => {
   let signupUsernameValue = elSignupUsername.value.trim();
   let signupPasswordValue = elSignuppassword.value.trim();
   let signupPhoneValue = elSignupPhone.value.trim();
-
+console.log(signupFullnameValue, signupUsernameValue, signupPasswordValue, signupPhoneValue);
   fetch("https://online-excel-heroku.herokuapp.com/auth/register", {
     method: "POST",
     headers: {
@@ -40,7 +41,6 @@ elLoginForm.addEventListener("submit", (evt) => {
   evt.preventDefault();
   let loginUsernameValue = elLoginInputUsername.value.trim();
   let loginPasswordValue = elLoginInputPassword.value.trim();
-
   fetch("https://online-excel-heroku.herokuapp.com/auth/token", {
     method: "POST",
     headers: {
@@ -48,7 +48,7 @@ elLoginForm.addEventListener("submit", (evt) => {
     },
     body: JSON.stringify({
       username: loginUsernameValue,
-      password: loginPasswordValue,
+      password: loginPasswordValue
     }),
   })
     .then((res) => res.json())
@@ -56,9 +56,18 @@ elLoginForm.addEventListener("submit", (evt) => {
       console.log(data)
         let token = data?.data.data.accessToken
         console.log(token);
-      if (token && loginPasswordValue == 10062001) {
+
+        if(token){
+          window.localStorage.setItem("token", token);
+          window.location.replace("user.html");
+        }
+
+      if (token && password) {
         window.localStorage.setItem("token", token);
+        window.localStorage.setItem("password", password);
         window.location.replace("index.html");
       }
+
+     
     });
 });
