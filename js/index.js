@@ -45,6 +45,12 @@ if (!(token && password)) {
   window.location.replace("login.html");
 }
 
+logout.addEventListener('click', ()=>{
+  window.localStorage.removeItem('token')
+  window.location.replace("login.html");
+  window.location.replace('index.html')
+})
+
 // Rendering datas to Dom from backend
 
 fetch("https://online-excel-heroku.herokuapp.com/student/list", {

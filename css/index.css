@@ -43,7 +43,7 @@
   margin-left: 10px;
 }
 
-.modal{
+.modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -56,11 +56,11 @@
   background: rgba(0, 0, 0, 0.5);
 }
 
-.modal--active{
-	display: flex;
+.modal--active {
+  display: flex;
 }
 
-.modal__inner{
+.modal__inner {
   max-width: 500px;
   width: 100%;
   height: auto;
@@ -69,19 +69,20 @@
   border-radius: 5px;
 }
 
-.modal__heading{
-	font-size: 30px;
-	text-align: center;
-	margin: 0;
-	margin-bottom: 20px;
-	color: #3cc;
+.modal__heading {
+  font-size: 30px;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 20px;
+  color: #3cc;
 }
 
-.modal__input-form, .create__form{
-	display: grid;
-	grid-template-columns: repeat(2, 200px);
-	row-gap: 25px;
-	column-gap: 20px;
+.modal__input-form,
+.create__form {
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  row-gap: 25px;
+  column-gap: 20px;
 }
 
 .modal__input {
@@ -94,8 +95,8 @@
   border-radius: 3px;
 }
 
-.modal__input::placeholder{
-	text-transform: capitalize;
+.modal__input::placeholder {
+  text-transform: capitalize;
 }
 
 .modal__input[type="number"]::-webkit-inner-spin-button,
@@ -104,27 +105,39 @@
   margin: 0;
 }
 
-.form__btn{
-	display: block;
-	width: 200px;
-	margin: 0 auto;
-	padding: 7px 10px;
-	background-color: #3cc;
-	border-radius: 3px;
-	border: none;
-	box-shadow: 0 0 1px 1px black;
-	color: #fff;
+.form__btn {
+  display: block;
+  width: 200px;
+  margin: 0 auto;
+  padding: 7px 10px;
+  background-color: #3cc;
+  border-radius: 3px;
+  border: none;
+  box-shadow: 0 0 1px 1px black;
+  color: #fff;
 }
 
-.form__btn-close{
-	background-color: red;
+.form__btn-close {
+  background-color: red;
 }
 
-button{
+#logout {
+  border: none;
+  width: 100px;
+  display: block;
+  margin-left: auto;
+  color: white;
+  background-color: red;
+  padding: 10px;
+  text-align: center;
+  border-radius: 3px;
+}
+
+button {
   cursor: pointer;
 }
 
-.student__adder-btn{
+.student__adder-btn {
   display: block;
   width: 200px;
   margin: 0 auto;
@@ -138,11 +151,11 @@ button{
   border: none;
 }
 
-.student__adder-btn:hover{
-opacity: 0.5;
+.student__adder-btn:hover {
+  opacity: 0.5;
 }
 
-.modal--add{
+.modal--add {
   position: fixed;
   top: 0;
   left: 0;
@@ -155,11 +168,11 @@ opacity: 0.5;
   background: rgba(0, 0, 0, 0.5);
 }
 
-.modal--add--active{
+.modal--add--active {
   display: flex;
 }
 
-.modal__inner--add{
+.modal__inner--add {
   max-width: 500px;
   width: 100%;
   height: auto;
@@ -167,5 +180,3 @@ opacity: 0.5;
   background-color: #fff;
   border-radius: 5px;
 }
-
-
